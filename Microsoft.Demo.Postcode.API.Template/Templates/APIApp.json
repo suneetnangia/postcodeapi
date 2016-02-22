@@ -99,5 +99,11 @@
         "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
       ]
     }
-  ]
+  ],
+  "outputs": {
+    "siteDetails": {
+      "type": "string",
+      "value": "[concat('http://',reference(resourceId('Microsoft.Web/sites', parameters('apiAppName'))).hostNames[0])]"
+    }
+  }
 }
