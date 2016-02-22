@@ -10,7 +10,7 @@
     },
     "hostingPlanName": {
       "type": "string",
-      "defaultValue": "D1",
+      "defaultValue": "PostcodeAPISvcPlan",
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }
