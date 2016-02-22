@@ -10,18 +10,21 @@
     },
     "hostingPlanName": {
       "type": "string",
-      "defaultValue": "PostcodeAPIAppSvcPlan",
+      "defaultValue": "D1",
       "metadata": {
-        "description": "The name of the name App Service plan."
+        "description": "The settings of the existing hosting plan."
       }
     },
-    "hostingPlanSettings": {
-      "type": "Object",
-      "defaultValue": {
-          "name": "D1",
-          "tier": "Shared",
-          "capacity": 0
-      },
+    "hostingPlanTier": {
+      "type": "string",
+      "defaultValue": "Shared",
+      "metadata": {
+        "description": "The settings of the existing hosting plan."
+      }
+    },
+    "hostingPlanCapacity": {
+      "type": "int",
+      "defaultValue": 0,
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }
@@ -34,12 +37,19 @@
       }
     }
   },
+  "variables": {
+    "sku": {
+      "name": "[parameters('hostingPlanName')]",
+      "tier": "[parameters('hostingPlanTier')]",
+      "capacity": "[parameters('hostingPlanCapacity')]"
+    }
+  },
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2015-08-01",
       "name": "[parameters('hostingPlanName')]",
-      "sku": "[parameters('hostingPlanSettings')]",
+      "sku": "[variables('sku')]",
       "location": "[resourceGroup().location]",
       "properties": {
         "name": "[parameters('hostingPlanName')]"
