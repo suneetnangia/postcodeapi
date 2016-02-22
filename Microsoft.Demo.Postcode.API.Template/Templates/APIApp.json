@@ -15,14 +15,21 @@
         "description": "The settings of the existing hosting plan."
       }
     },
-    "hostingPlanTier": {
+    "hostingPlanSettingName": {
+      "type": "string",
+      "defaultValue": "D1",
+      "metadata": {
+        "description": "The settings of the existing hosting plan."
+      }
+    },
+    "hostingPlanSettingTier": {
       "type": "string",
       "defaultValue": "Shared",
       "metadata": {
         "description": "The settings of the existing hosting plan."
       }
     },
-    "hostingPlanCapacity": {
+    "hostingPlanSettingCapacity": {
       "type": "int",
       "defaultValue": 0,
       "metadata": {
@@ -39,9 +46,9 @@
   },
   "variables": {
     "sku": {
-      "name": "[parameters('hostingPlanName')]",
-      "tier": "[parameters('hostingPlanTier')]",
-      "capacity": "[parameters('hostingPlanCapacity')]"
+      "name": "[parameters('hostingPlanSettingName')]",
+      "tier": "[parameters('hostingPlanSettingTier')]",
+      "capacity": "[parameters('hostingPlanSettingCapacity')]"
     }
   },
   "resources": [
