@@ -18,11 +18,9 @@
     "hostingPlanSettings": {
       "type": "Object",
       "defaultValue": {
-        "sku": {
           "name": "D1",
           "tier": "Shared",
           "capacity": 0
-        }
       },
       "metadata": {
         "description": "The settings of the existing hosting plan."
@@ -41,7 +39,7 @@
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2015-08-01",
       "name": "[parameters('hostingPlanName')]",
-      "sku": "[parameters('hostingPlanSettings').sku]",
+      "sku": "[parameters('hostingPlanSettings')]",
       "location": "[resourceGroup().location]",
       "properties": {
         "name": "[parameters('hostingPlanName')]"
