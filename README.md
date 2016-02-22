@@ -1,7 +1,8 @@
 # Postcode API
 AppService API App ARM Demo
 
-This API app uses AppService APIApp for service tier and can be deployed to any Azure subscripton. 
+This API app uses AppService APIApp for service tier and can be deployed to any Azure subscripton.
+Data store is a highly performant Azure Table Storage, are you still using SQL Server for PAF in your oraganisation?
 
 Data used is from a RoyalMail sample file consisting 500K records mainly from York and Plymouth e.g. PL1 1DH, YO90 1UT.
 
