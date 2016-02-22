@@ -12,4 +12,4 @@ Data used is from a RoyalMail sample file consisting 500K records mainly from Yo
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
-Once deployed use this url to test the API http://YourApiName.azurewebsites.net/swagger
+Once deployed use this url to test the API http://&lt;YourApiAppName&gt;.azurewebsites.net/swagger
