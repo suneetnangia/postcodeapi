@@ -9,14 +9,14 @@
     "hostingPlanName": {
       "value": "AppSvcPlan"
     },
-    "hostingPlanSettings": {
-      "value": {
-        "sku": {
-          "name": "D1",
-          "tier": "Shared",
-          "capacity": 0
-        }
-      }
+    "hostingPlanSettingName": {
+      "value": "D1"
+    },
+    "hostingPlanSettingTier": {
+      "value": "Shared"
+    },
+    "hostingPlanSettingCapacity": {
+      "value": 0
     },
     "packageUrl": {
       "value": "https://servicesrepo.blob.core.windows.net/postcodeapi/Microsoft.Demo.Postcode.API.zip"
