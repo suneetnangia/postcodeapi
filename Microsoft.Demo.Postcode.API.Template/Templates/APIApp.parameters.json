@@ -12,8 +12,8 @@
     "hostingPlanSettings": {
       "value": {
         "sku": {
-          "name": "F1",
-          "tier": "Free",
+          "name": "D1",
+          "tier": "Shared",
           "capacity": 0
         }
       }

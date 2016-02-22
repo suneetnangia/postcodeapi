@@ -17,7 +17,7 @@ Param(
 )
 
 Import-Module Azure -ErrorAction SilentlyContinue
-#Login-AzureRmAccount
+Login-AzureRmAccount
 
 try {
     [Microsoft.Azure.Common.Authentication.AzureSession]::ClientFactory.AddUserAgent("VSAzureTools-$UI$($host.name)".replace(" ","_"), "2.8")
